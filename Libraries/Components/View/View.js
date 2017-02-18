@@ -170,6 +170,20 @@ const View = React.createClass({
     ]),
 
     /**
+     * Controls whether the accessibility elements contained within this view are hidden
+     * from accessibility services that query the screen.
+     *
+     * - If `true`, this View and all accessibility elements contained within it are hidden
+     * from accessibility services.
+     * - If `false`, this view is visible to accessibility services.
+     * - The default value is `null` which means the OS decides which elements are important
+     * for accessibility.
+     *
+     * @platform ios
+     */
+    accessibilityElementsHidden: PropTypes.bool,
+
+    /**
      * Controls how view is important for accessibility which is if it
      * fires accessibility events and if it is reported to accessibility services
      * that query the screen. Works for Android only.
