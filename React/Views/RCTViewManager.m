@@ -137,7 +137,7 @@ RCT_CUSTOM_VIEW_PROPERTY(importantForAccessibility, NSString, RCTView)
   NSString *input = [RCTConvert NSString:json];
 
   if ([input isEqualToString:@"yes"]) {
-    view.isAccessibilityElement = true;
+    view.isAccessibilityElement = defaultView.isAccessibilityElement;
     view.accessibilityElementsHidden = false;
   } else if ([input isEqualToString:@"no"]) {
     view.isAccessibilityElement = false;
